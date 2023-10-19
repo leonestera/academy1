@@ -1,0 +1,108 @@
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   b234.txt
+
+
+Leonid2@DESKTOP-I8U867S MINGW64 /d/academy/git/academy1 (main|MERGING)
+$ git commit -m "fix conflict"
+[main 0ecd512] fix conflict
+
+Leonid2@DESKTOP-I8U867S MINGW64 /d/academy/git/academy1 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Leonid2@DESKTOP-I8U867S MINGW64 /d/academy/git/academy1 (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/leonestera/academy1.git
+   a8c40ec..0ecd512  main -> main
+
+Leonid2@DESKTOP-I8U867S MINGW64 /d/academy/git/academy1 (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 688 bytes | 34.00 KiB/s, done.
+From https://github.com/leonestera/academy1
+   0ecd512..853b0e5  main       -> origin/main
+Updating 0ecd512..853b0e5
+Fast-forward
+ web_git_file | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 web_git_file
+
+Leonid2@DESKTOP-I8U867S MINGW64 /d/academy/git/academy1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Leonid2@DESKTOP-I8U867S MINGW64 /d/academy/git/academy1 (main)
+$ git branch
+  branch1
+* main
+
+Leonid2@DESKTOP-I8U867S MINGW64 /d/academy/git/academy1 (main)
+$ git log
+commit 853b0e541be0044ad2592e0108379b5146731a9f (HEAD -> main, origin/main)
+Author: leonestera <145483775+leonestera@users.noreply.github.com>
+Date:   Thu Oct 19 18:52:41 2023 +0300
+
+    Create web_git_file
+
+    Created_web_git_file
+
+commit 0ecd512dd4109af43cbc17bb254a1905f2f29e52
+Merge: a8c40ec 42a3d60
+Author: leonestera <rubakleo@gmail.com>
+Date:   Thu Oct 19 18:47:38 2023 +0300
+
+    fix conflict
+
+commit a8c40ec3c4b46e553cc73743b510cc180d25ae13
+Author: leonestera <rubakleo@gmail.com>
+Date:   Tue Oct 17 23:48:46 2023 +0300
+
+    erklerung
+
+commit 42a3d60f454d9917e775d0b051914688e2a4480b (origin/branch1, branch1)
+Author: leonestera <rubakleo@gmail.com>
+Date:   Tue Oct 17 21:34:00 2023 +0300
+
+    robota
+
+commit ae0b3c20a467fe633d6a7a3281d10a536dd3a80b
+Author: leonestera <rubakleo@gmail.com>
+Date:   Tue Oct 17 21:31:11 2023 +0300
+
+    sereda
+
+commit b01b9dd773f99179bcec4f200499d32ce247183e
+Author: leonestera <rubakleo@gmail.com>
+Date:   Tue Oct 17 21:24:50 2023 +0300
+
+    New b234
+
+Leonid2@DESKTOP-I8U867S MINGW64 /d/academy/git/academy1 (main)
+$ git log --merges
+commit 0ecd512dd4109af43cbc17bb254a1905f2f29e52
+Merge: a8c40ec 42a3d60
+Author: leonestera <rubakleo@gmail.com>
+Date:   Thu Oct 19 18:47:38 2023 +0300
+
+    fix conflict
