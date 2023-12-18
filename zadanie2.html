@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="zadanie2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header"><h1>Laravel 8</h1></div>
+    <div class="container"><h4>Get startet whit mashinen lerning</h4><p style="font-size:15px;">Lern the fundamentales of mashinen lerning with this 
+        free course.Future proof your career by adding ML skill
+        to your toolkit -or build foundational ML skill to land
+        a job in A or Data Sceice</p>
+     <button class="button">Get free curse</button>
+    </div>
+    <div class="box"><p style="font-size:15px;">
+        While creating an application or working with files 
+        in your application,you will want to store a file in a folder.Sometimes 
+        there will be instances where the folder does not exist.</p></div>
+<div class="box1"><p style="font-size:15px;">
+        You want to create that folder during the process so the file can be stored without
+        making the user resend the request.</p></div>
+<div class="box2"><p style="font-size:15px;">
+        You can create folder or directory by using the<sub><span class="red">Fille::makeDirectory() </span></sub>function.</p>
+        <h2>Syntax</h2>
+    </div>
+   <div class="box3">
+   <a><span class="green">File</span>::makeDirectory($path, $mode, $recursive, $force)</a>
+   </div> 
+   <div class="header"><h2>Parameters</h2>
+    <p> The
+        <span class="red">Fille::makeDirectory </span>function takes the following as input parameters:
+    </p>
+    <ul>
+        <li>
+            <p><span class="red-patch">$patch</span> This string represents the path of the directory we wish to
+                create. </p>
+        </li>
+        <li>
+            <p> <span class="red-patch">$mode</span>This is a four-digit integer that is used to set permissions
+                for the directory. </p>
+        </li>
+        <li>
+            <p><span class="red-patch">$mode</span>This is a boolean variable used to specify if the recursive
+                mode is set. </p>
+        </li>
+        <li>
+            <p><span class="red-patch">$forse</span>This is a boolean variable that, when set, lets you create a
+                file in the profile path even when the directories in the path do not exist.
+    </ul>
+    <h2>Return value</h2>
+    <p>The function returns true if the requested directory is created. Otherwise, it returns false.
+    </p>
+    <h2>Code</h2>
+    <div class="box4"><code>
+    <pre> public <span class="blue" >function</span> createDirecrotory( <span class="green">Request</span> $request) 
+        { 
+            $path = public_path(<span class="orange">'upload/</span>); 
+      
+            <span class="blue">if</span>(<span class="green">!File</span>:isDirectory($path)){ 
+                <span class="green">Fille</span>::makeDirectory($path,<span class="greenyellow">0777</span>,<span class="blue">true</span>, <span class="blue">true</span>); 
+     
+     <span class="gray">// retry storing the file in newly created path.</span>  
+        }    
+    } 
+</code>
+            </pre></div>
+<p>The above code has<sub><span class="red">$patch</span></sub>which is basically an<sub class="red">upload</sub>folder where you want to store the file.</p> 
+<p>We check if it exists, and if it doesn't, we create the<sub><span class="red">upload</sub>folder.</p> 
+    <div class="alert" <p> Note:: The <sub><span class="red">The File::isDirectory() </sub><b> function</b> is used to check whether or not the given path exists.</p>
+</div>
+<hr>
+<p>RELATED TAGS</p>
+<button class="buttongray">folder</button>
+<button class="buttongray">php</button>
+<button class="buttongray">laravel</button>
+<p>CONTRIBUTOR</p>
+<button class="buttonring">c</button> Chinwaube Eljah Arubulba
+<hr>
+<p>Licence: Creative Cammern-Abbrbutson-Chare Alee 4.0(CC-BY-SA 4.0)</p>
+<script src="https://kit.fontawesome.com/668d6a5fcc.js" crossorigin="anonymous"></script>
+<div class="box5">
+ <i class="fa-regular fa-heart"></i>
+ <i class="fa-regular fa-bookmark"></i>
+ <i class="fa-solid fa-share-nodes"></i> 
+ <i class="fa-solid fa-bullhorn"></i>
+</div>
+ <div class="footer"><center> Did you find thes helpful? <i class="fa-regular fa-thumbs-up"></i> <i class="fa-regular fa-thumbs-down"></i>
+</center></div>    
+</div> 
+</body>
+</html> 
